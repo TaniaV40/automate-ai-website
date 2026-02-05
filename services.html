@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="description" content="AutomateAI transforms your business with intelligent neural automation and custom AI workflows.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutomateAI — Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: '#170A54',
+              brand: '#3A0DBC',
+              light: '#F7F7F7',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light text-dark">
+    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+    <header class="site-header backdrop-blur">
+      <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6">
+        <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight">
+          <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
+          <span>AutomateAI</span>
+        </div>
+        <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+          <a class="hover:text-brand" href="index.html">Home</a>
+          <a class="text-brand" href="services.html">Services</a>
+          <a class="hover:text-brand" href="case-studies.html">Case Studies</a>
+          <a class="hover:text-brand" href="about.html">About</a>
+          <a class="hover:text-brand" href="contact.html">Contact</a>
+        </div>
+        <button
+          class="nav-toggle btn-cta btn-get-started inline-flex md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+        <a class="btn-cta btn-get-started hidden bg-brand text-white hover:brightness-110 md:inline-flex" href="contact.html"
+          >Get Started</a
+        >
+      </nav>
+      <div
+        id="mobile-menu"
+        class="nav-links hidden flex-col gap-4 border-t border-black/5 bg-white px-6 py-4 text-sm font-medium md:hidden"
+      >
+        <a class="hover:text-brand" href="index.html">Home</a>
+        <a class="text-brand" href="services.html">Services</a>
+        <a class="hover:text-brand" href="case-studies.html">Case Studies</a>
+        <a class="hover:text-brand" href="about.html">About</a>
+        <a class="hover:text-brand" href="contact.html">Contact</a>
+        <a class="btn-cta btn-get-started mt-2 w-fit bg-brand text-white" href="contact.html">Get Started</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-divider hero-gradient px-6 py-28 text-center text-white">
+        <div class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6">
+          <h1 class="page-title text-white text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            AI Automation Solutions
+          </h1>
+          <p class="max-w-2xl text-base text-white/80 sm:text-lg">
+            Comprehensive suite of AI-powered automation services designed to transform how your business
+            operates.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-divider on-light bg-light px-6 py-24">
+        <div class="mx-auto w-full max-w-6xl">
+          <div class="section-header">
+            <p class="section-kicker">Our Services</p>
+            <h2 class="section-title">AI Automation Solutions</h2>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="message-square-code" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">AI Chatbots &amp; Assistants</h3>
+              <p class="card-text mt-2 text-sm">
+                NLP-powered support across multi-channel customer touchpoints.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="workflow" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Business Process Automation</h3>
+              <p class="card-text mt-2 text-sm">
+                Document processing and workflow orchestration at scale.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="line-chart" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Predictive Analytics</h3>
+              <p class="card-text mt-2 text-sm">
+                Forecasting and risk assessment models for proactive decisions.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="plug" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Custom API Integrations</h3>
+              <p class="card-text mt-2 text-sm">
+                REST/GraphQL connectivity with legacy system bridges.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="mail" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Email Automation</h3>
+              <p class="card-text mt-2 text-sm">
+                Smart scheduling and personalization at every touchpoint.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="file-text" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Document Intelligence</h3>
+              <p class="card-text mt-2 text-sm">
+                OCR workflows and accurate data extraction at scale.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="shield-check" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">AI Security</h3>
+              <p class="card-text mt-2 text-sm">
+                Threat detection and compliance safeguards baked in.
+              </p>
+            </article>
+            <article class="service-card card-glass">
+              <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5">
+                <i data-lucide="cpu" class="icon-glow" style="stroke-width: 1.5px"></i>
+              </div>
+              <h3 class="card-title text-brand text-lg">Custom ML Models</h3>
+              <p class="card-text mt-2 text-sm">
+                Industry-specific models engineered for your data.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-divider on-light bg-light px-6 pb-24">
+        <div class="mx-auto w-full max-w-6xl">
+          <div class="section-header">
+            <p class="section-kicker">The Process</p>
+            <h2 class="section-title">The Process</h2>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div class="card-glass">
+              <p class="card-label">01 Discovery</p>
+              <p class="card-text mt-3 text-sm">
+                We analyze your workflows and identify automation opportunities.
+              </p>
+            </div>
+            <div class="card-glass">
+              <p class="card-label">02 Design</p>
+              <p class="card-text mt-3 text-sm">
+                Our team architects a solution tailored to your needs.
+              </p>
+            </div>
+            <div class="card-glass">
+              <p class="card-label">03 Develop</p>
+              <p class="card-text mt-3 text-sm">
+                We build and test your automation using agile methodology.
+              </p>
+            </div>
+            <div class="card-glass">
+              <p class="card-label">04 Deploy</p>
+              <p class="card-text mt-3 text-sm">
+                Launch, monitor, and continuously optimize for maximum ROI.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark px-6 py-16 text-white">
+      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h3 class="logo-mark flex items-center gap-2 text-lg font-semibold">
+            <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
+            <span>AutomateAI</span>
+          </h3>
+          <p class="mt-3 text-sm text-white/70">
+            Transforming businesses through intelligent automation and AI-powered solutions.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Quick Links</h4>
+          <ul class="mt-4 space-y-2 text-sm text-white/80">
+            <li><a class="hover:text-white" href="index.html">Home</a></li>
+            <li><a class="hover:text-white" href="services.html">Services</a></li>
+            <li><a class="hover:text-white" href="case-studies.html">Case Studies</a></li>
+            <li><a class="hover:text-white" href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Contact Info</h4>
+          <ul class="mt-4 space-y-2 text-sm text-white/80">
+            <li>hello@automateai.com</li>
+            <li>+1 (555) 123-4567</li>
+            <li>San Francisco, CA</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Social</h4>
+          <div class="mt-4 flex gap-3">
+            <a class="social-link" href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin" style="stroke-width: 1.5px"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="Twitter">
+              <i data-lucide="twitter" style="stroke-width: 1.5px"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="GitHub">
+              <i data-lucide="github" style="stroke-width: 1.5px"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-xs text-white/60">© 2026 AutomateAI. All rights reserved.</div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

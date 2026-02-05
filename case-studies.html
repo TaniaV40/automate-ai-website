@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="description" content="AutomateAI delivers impactful AI solutions through real-world case studies and measurable results.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutomateAI — Case Studies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: '#170A54',
+              brand: '#3A0DBC',
+              light: '#F7F7F7',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-light text-dark">
+    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+    <header class="site-header backdrop-blur">
+      <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6">
+        <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight">
+          <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
+          <span>AutomateAI</span>
+        </div>
+        <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+          <a class="hover:text-brand" href="index.html">Home</a>
+          <a class="hover:text-brand" href="services.html">Services</a>
+          <a class="text-brand" href="case-studies.html">Case Studies</a>
+          <a class="hover:text-brand" href="about.html">About</a>
+          <a class="hover:text-brand" href="contact.html">Contact</a>
+        </div>
+        <button
+          class="nav-toggle btn-cta btn-get-started inline-flex md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+        >
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+        <a class="btn-cta btn-get-started hidden bg-brand text-white hover:brightness-110 md:inline-flex" href="contact.html"
+          >Get Started</a
+        >
+      </nav>
+      <div
+        id="mobile-menu"
+        class="nav-links hidden flex-col gap-4 border-t border-black/5 bg-white px-6 py-4 text-sm font-medium md:hidden"
+      >
+        <a class="hover:text-brand" href="index.html">Home</a>
+        <a class="hover:text-brand" href="services.html">Services</a>
+        <a class="text-brand" href="case-studies.html">Case Studies</a>
+        <a class="hover:text-brand" href="about.html">About</a>
+        <a class="hover:text-brand" href="contact.html">Contact</a>
+        <a class="btn-cta btn-get-started mt-2 w-fit bg-brand text-white" href="contact.html">Get Started</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-divider hero-gradient px-6 py-28 text-center text-white">
+        <div class="mx-auto flex w-full max-w-4xl flex-col items-center gap-8">
+          <h1 class="page-title text-white text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+            Real Results, Real Impact
+          </h1>
+          <p class="max-w-2xl text-base text-white/80 sm:text-lg">
+            500+ Projects Delivered | 50M+ Hours Automated | $100M+ Client Savings.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-divider on-light bg-white px-6 py-28">
+        <div class="mx-auto w-full max-w-6xl">
+          <div class="section-header">
+            <p class="section-kicker">Case Studies</p>
+            <h2 class="section-title">Real Results, Real Impact</h2>
+          </div>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">E-Commerce</span>
+                <h2 class="card-title mt-4 text-xl">Global Retail Chain</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    Scaling customer support while response times climbed during peak seasons.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Deployed AI chatbots with NLP triage and seamless CRM integration.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">70%</p>
+                      <p class="case-stat__label">Response Time</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">45%</p>
+                      <p class="case-stat__label">Cost Savings</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">92%</p>
+                      <p class="case-stat__label">Satisfaction</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">AI Chatbot</span>
+                  <span class="case-tag">Customer Support</span>
+                  <span class="case-tag">NLP</span>
+                </div>
+              </div>
+            </article>
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">Financial Services</span>
+                <h2 class="card-title mt-4 text-xl">FinTech Startup</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    Manual document verification slowed loan approvals to 5–7 days.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Implemented document AI with automated validation workflows.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">85%</p>
+                      <p class="case-stat__label">Faster Processing</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">99%</p>
+                      <p class="case-stat__label">Accuracy Rate</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">3x</p>
+                      <p class="case-stat__label">Volume Capacity</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">Document AI</span>
+                  <span class="case-tag">Automation</span>
+                  <span class="case-tag">FinTech</span>
+                </div>
+              </div>
+            </article>
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">Healthcare</span>
+                <h2 class="card-title mt-4 text-xl">Provider Network</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    Scheduling inefficiencies led to long wait times and underutilized staff.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Built predictive scheduling with demand forecasting automation.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">40%</p>
+                      <p class="case-stat__label">Reduced Wait</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">30%</p>
+                      <p class="case-stat__label">Efficiency</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">$2M</p>
+                      <p class="case-stat__label">Annual Savings</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">Predictive Analytics</span>
+                  <span class="case-tag">Scheduling</span>
+                  <span class="case-tag">Healthcare</span>
+                </div>
+              </div>
+            </article>
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">Manufacturing</span>
+                <h2 class="card-title mt-4 text-xl">Manufacturing Giant</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    Unexpected downtime and slow maintenance escalations across plants.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Rolled out predictive maintenance workflows with anomaly detection.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">60%</p>
+                      <p class="case-stat__label">Less Downtime</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">28%</p>
+                      <p class="case-stat__label">Maintenance Cost</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">2.4x</p>
+                      <p class="case-stat__label">Alert Speed</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">IoT</span>
+                  <span class="case-tag">Anomaly Detection</span>
+                  <span class="case-tag">Automation</span>
+                </div>
+              </div>
+            </article>
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">Technology</span>
+                <h2 class="card-title mt-4 text-xl">SaaS Platform</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    High churn and low customer activation during onboarding.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Automated lifecycle messaging and in-app guidance with AI insights.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">35%</p>
+                      <p class="case-stat__label">Churn Reduction</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">42%</p>
+                      <p class="case-stat__label">Activation Rate</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">1.8x</p>
+                      <p class="case-stat__label">Expansion</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">Lifecycle AI</span>
+                  <span class="case-tag">Product Analytics</span>
+                  <span class="case-tag">SaaS</span>
+                </div>
+              </div>
+            </article>
+            <article class="card-glass case-card">
+              <div class="case-card__header">
+                <span class="case-card__badge">Transportation</span>
+                <h2 class="card-title mt-4 text-xl">Logistics Company</h2>
+              </div>
+              <div class="case-card__body">
+                <div class="case-block">
+                  <p class="case-block__label">Challenge</p>
+                  <p class="case-block__text">
+                    Rising fuel costs and inefficient route planning across regions.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Solution</p>
+                  <p class="case-block__text">
+                    Implemented AI route optimization with real-time constraints.
+                  </p>
+                </div>
+                <div class="case-block">
+                  <p class="case-block__label">Results</p>
+                  <div class="case-stats">
+                    <div class="case-stat">
+                      <p class="case-stat__value">20%</p>
+                      <p class="case-stat__label">Fuel Savings</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">18%</p>
+                      <p class="case-stat__label">Route Efficiency</p>
+                    </div>
+                    <div class="case-stat">
+                      <p class="case-stat__value">24/7</p>
+                      <p class="case-stat__label">Visibility</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-tags">
+                  <span class="case-tag">Optimization</span>
+                  <span class="case-tag">Logistics</span>
+                  <span class="case-tag">AI Routing</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark px-6 py-16 text-white">
+      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <h3 class="logo-mark flex items-center gap-2 text-lg font-semibold">
+            <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
+            <span>AutomateAI</span>
+          </h3>
+          <p class="mt-3 text-sm text-white/70">
+            Transforming businesses through intelligent automation and AI-powered solutions.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Quick Links</h4>
+          <ul class="mt-4 space-y-2 text-sm text-white/80">
+            <li><a class="hover:text-white" href="index.html">Home</a></li>
+            <li><a class="hover:text-white" href="services.html">Services</a></li>
+            <li><a class="hover:text-white" href="case-studies.html">Case Studies</a></li>
+            <li><a class="hover:text-white" href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Contact Info</h4>
+          <ul class="mt-4 space-y-2 text-sm text-white/80">
+            <li>hello@automateai.com</li>
+            <li>+1 (555) 123-4567</li>
+            <li>San Francisco, CA</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Social</h4>
+          <div class="mt-4 flex gap-3">
+            <a class="social-link" href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin" style="stroke-width: 1.5px"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="Twitter">
+              <i data-lucide="twitter" style="stroke-width: 1.5px"></i>
+            </a>
+            <a class="social-link" href="#" aria-label="GitHub">
+              <i data-lucide="github" style="stroke-width: 1.5px"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-xs text-white/60">© 2026 AutomateAI. All rights reserved.</div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
