@@ -1,13 +1,15 @@
 {
-  "hero_headline": "<span class=\"text-white\" style=\"text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45)\">Transform Your Business with</span> <span class=\"bg-gradient-to-r from-[#7C3AED] to-[#60A5FA] bg-clip-text text-transparent\">Intelligent Automation</span>",
-  "hero_subtext": "We build custom AI solutions that automate your workflows, enhance productivity, and drive growth.",
-  "about_header": "Why Choose AutomateAI?",
+  "cta_button": "Get Started Today",
+  "cta_headline": "Ready to Automate Your Business?",
+  "hero_subtext": "We build custom AI solutions that automate your workflows, enhance productivity, and drive growth. ",
   "about_body": [
     "Custom solutions tailored to your specific needs.",
     "Expert team with 10+ years of AI experience.",
     "24/7 support and continuous optimization."
   ],
   "services_title": "Our Services",
+  "footer_description": "Transforming businesses through intelligent automation and AI-powered solutions.",
+  "hero_headline": "<span class=\"text-white\" style=\"text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45)\">Transform Your Business with</span> <span class=\"bg-gradient-to-r from-[#7C3AED] to-[#60A5FA] bg-clip-text text-transparent\">Intelligent Automation</span>",
   "services_subtitle": "Comprehensive AI automation solutions tailored to your business needs.",
   "services": [
     {
@@ -27,7 +29,5 @@
       "description": "Connect your tools and systems for seamless operations."
     }
   ],
-  "cta_headline": "Ready to Automate Your Business?",
-  "cta_button": "Get Started Today",
-  "footer_description": "Transforming businesses through intelligent automation and AI-powered solutions."
+  "about_header": "Why Choose AutomateAI?"
 }
