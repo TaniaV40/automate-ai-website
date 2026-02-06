@@ -1,0 +1,8 @@
+{
+  "faq_title": "Frequently Asked Questions",
+  "faqs": [
+    { "question": "How long does implementation take?", "answer": "Typically 2-4 weeks." },
+    { "question": "Do you offer ongoing support?", "answer": "Yes, we provide 24/7 monitoring." },
+    { "question": "Can you integrate with my tools?", "answer": "Yes, we connect with most CRMs." }
+  ]
+}
