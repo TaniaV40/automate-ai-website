@@ -21,54 +21,63 @@
       };
     </script>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body class="bg-light text-dark">
     <canvas id="mesh-canvas" aria-hidden="true"></canvas>
-    <header class="site-header backdrop-blur">
-      <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6">
-        <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight">
-          <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
-          <span>Series Media</span>
-        </div>
-        <div class="hidden items-center gap-6 text-sm font-medium md:flex">
-          <a class="hover:text-brand" href="index.html">Home</a>
-          <a class="hover:text-brand" href="services.html">Services</a>
-          <a class="hover:text-brand" href="case-studies.html">Case Studies</a>
-          <a class="text-brand" href="about.html">About</a>
-          <a class="hover:text-brand" href="contact.html">Contact</a>
-        </div>
-        <button
-          class="nav-toggle btn-cta btn-get-started inline-flex text-gray-900 md:hidden"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Open menu"
-        >
-          <i data-lucide="menu" aria-hidden="true"></i>
-        </button>
-        <a class="btn-cta btn-get-started hidden bg-brand text-white hover:brightness-110 md:inline-flex" href="contact.html"
-          >Get Started</a
-        >
-      </nav>
-      <div
-        id="mobile-menu"
-        class="nav-links fixed top-0 right-0 z-50 h-full w-64 transform translate-x-full bg-white px-6 py-6 text-sm font-medium shadow-2xl transition-transform duration-300 md:hidden flex flex-col gap-4"
-      >
-        <button
-          class="mobile-menu-close inline-flex items-center justify-center self-end rounded-full border border-black/10 p-2 text-gray-900 hover:bg-black/5"
-          type="button"
-          aria-label="Close menu"
-        >
-          <i data-lucide="x" aria-hidden="true"></i>
-        </button>
-        <a class="hover:text-brand" href="index.html">Home</a>
-        <a class="hover:text-brand" href="services.html">Services</a>
-        <a class="hover:text-brand" href="case-studies.html">Case Studies</a>
-        <a class="text-brand" href="about.html">About</a>
-        <a class="hover:text-brand" href="contact.html">Contact</a>
-        <a class="btn-cta btn-get-started mt-2 w-fit bg-brand text-white" href="contact.html">Get Started</a>
-      </div>
-    </header>
+    <header class="site-header backdrop-blur fixed top-0 w-full z-40 transition-colors duration-300">
+  <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+    <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-900">
+      <i data-lucide="zap" class="icon-glow h-5 w-5 fill-current" aria-hidden="true"></i>
+      <span>Series Media</span>
+    </div>
+
+    <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+      <a class="text-gray-700 hover:text-blue-600" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-blue-600" href="services.html">Services</a>
+      <a class="text-gray-700 hover:text-blue-600" href="case-studies.html">Case Studies</a>
+      <a class="text-gray-700 hover:text-blue-600" href="about.html">About</a>
+      <a class="text-gray-700 hover:text-blue-600" href="contact.html">Contact</a>
+    </div>
+
+    <button
+      class="nav-toggle p-2 text-black md:hidden hover:bg-gray-100 rounded-md"
+      type="button"
+      aria-label="Open menu"
+    >
+      <i data-lucide="menu" class="w-8 h-8"></i>
+    </button>
+
+    <a class="btn-cta btn-get-started hidden bg-purple-brand px-5 py-2.5 rounded-full text-white font-medium bg-purple-700 transition-all md:inline-flex" href="contact.html">
+      Get Started
+    </a>
+  </nav>
+
+  <div 
+  id="mobile-menu" 
+  class="fixed top-0 right-0 h-full w-64 transform translate-x-full bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col gap-6 p-6 z-[9999]"
+>
+  <button
+    class="mobile-menu-close self-end p-2 text-black hover:bg-gray-100 rounded-full"
+    type="button"
+    aria-label="Close menu"
+  >
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+
+  <nav class="flex flex-col gap-4 text-lg font-medium">
+    <a class="text-black hover:text-purple-600 font-bold" href="index.html">Home</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="services.html">Services</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="case-studies.html">Case Studies</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="about.html">About</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="contact.html">Contact</a>
+  </nav>
+
+  <a class="w-full bg-brand text-white text-center py-3 rounded-lg font-semibold mt-4 hover:brightness-110" href="contact.html">
+    Get Started
+  </a>
+</div>
+</header>
 
     <main>
       <section class="section-divider hero-gradient px-6 py-28 text-center text-white">
