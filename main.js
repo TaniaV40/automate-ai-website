@@ -1,5 +1,6 @@
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('#mobile-menu');
+const menuClose = menu?.querySelector('.mobile-menu-close');
 const header = document.querySelector('.site-header');
 const canvas = document.querySelector('#mesh-canvas');
 
@@ -7,11 +8,21 @@ const onScroll = () => {
   header?.classList.toggle('scrolled', window.scrollY > 50);
 };
 
+const setMenuState = (open) => {
+  if (!toggle || !menu) return;
+  toggle.setAttribute('aria-expanded', String(open));
+  menu.classList.toggle('translate-x-0', open);
+  menu.classList.toggle('translate-x-full', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+
 toggle?.addEventListener('click', () => {
   const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-  toggle.setAttribute('aria-expanded', String(!isOpen));
-  menu?.classList.toggle('hidden');
-  document.body.style.overflow = isOpen ? '' : 'hidden';
+  setMenuState(!isOpen);
+});
+
+menuClose?.addEventListener('click', () => {
+  setMenuState(false);
 });
 
 window.addEventListener('scroll', onScroll);
