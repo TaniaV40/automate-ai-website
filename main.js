@@ -68,11 +68,15 @@ if (canvas) {
   let width = 0;
   let height = 0;
   let dpr = 1;
+  let isMobile = false;
+  let connectionDistance = 140;
 
   const resize = () => {
     dpr = window.devicePixelRatio || 1;
     width = window.innerWidth;
     height = window.innerHeight;
+    isMobile = width < 768;
+    connectionDistance = isMobile ? 90 : 140;
     canvas.width = Math.floor(width * dpr);
     canvas.height = Math.floor(height * dpr);
     canvas.style.width = `${width}px`;
@@ -82,7 +86,8 @@ if (canvas) {
 
   const createPoints = () => {
     points.length = 0;
-    const count = Math.min(220, Math.max(140, Math.floor((width * height) / 12000)));
+    const densityScale = isMobile ? 0.45 : 1;
+    const count = Math.min(220, Math.max(80, Math.floor((width * height) / 12000) * densityScale));
     for (let i = 0; i < count; i += 1) {
       const px = (Math.random() + Math.random()) / 2;
       const py = (Math.random() + Math.random()) / 2;
@@ -122,7 +127,7 @@ if (canvas) {
         const dx = a.x - b.x;
         const dy = a.y - b.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        const maxDist = 140;
+        const maxDist = connectionDistance;
         if (dist < maxDist) {
           const alpha = ((1 - dist / maxDist) * 0.55 + 0.25) * centerFade * (0.6 + 0.4 * breath);
           ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;

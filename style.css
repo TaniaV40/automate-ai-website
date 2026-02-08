@@ -163,6 +163,12 @@ h6 {
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  #mesh-canvas {
+    opacity: 0.3 !important;
+  }
+}
+
 .site-header,
 main,
 footer {
