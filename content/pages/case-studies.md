@@ -8,7 +8,7 @@
     title: "Global Retail Chain"
     challenge: "Scaling customer support while response times climbed during peak seasons."
     solution: "Deployed AI chatbots with NLP triage and seamless CRM integration."
-    results:
+    key_results:
       - value: "70%"
         label: "Response Time"
       - value: "45%"
@@ -23,7 +23,7 @@
     title: "FinTech Startup"
     challenge: "Manual document verification slowed loan approvals to 5-7 days."
     solution: "Implemented document AI with automated validation workflows."
-    results:
+    key_results:
       - value: "85%"
         label: "Faster Processing"
       - value: "99%"
@@ -38,7 +38,7 @@
     title: "Provider Network"
     challenge: "Scheduling inefficiencies led to long wait times and underutilized staff."
     solution: "Built predictive scheduling with demand forecasting automation."
-    results:
+    key_results:
       - value: "40%"
         label: "Reduced Wait"
       - value: "30%"
@@ -53,7 +53,7 @@
     title: "Manufacturing Giant"
     challenge: "Unexpected downtime and slow maintenance escalations across plants."
     solution: "Rolled out predictive maintenance workflows with anomaly detection."
-    results:
+    key_results:
       - value: "60%"
         label: "Less Downtime"
       - value: "28%"
@@ -68,7 +68,7 @@
     title: "SaaS Platform"
     challenge: "High churn and low customer activation during onboarding."
     solution: "Automated lifecycle messaging and in-app guidance with AI insights."
-    results:
+    key_results:
       - value: "35%"
         label: "Churn Reduction"
       - value: "42%"
@@ -83,7 +83,7 @@
     title: "Logistics Company"
     challenge: "Rising fuel costs and inefficient route planning across regions."
     solution: "Implemented AI route optimization with real-time constraints."
-    results:
+    key_results:
       - value: "20%"
         label: "Fuel Savings"
       - value: "18%"

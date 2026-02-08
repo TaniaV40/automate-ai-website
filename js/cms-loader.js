@@ -25,6 +25,78 @@ const setText = (el, value) => {
   }
 };
 
+const formatInline = (text) =>
+  text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+const renderMarkdown = (markdown) => {
+  if (!markdown) return '';
+  if (markdown.includes('<')) return markdown;
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+  const html = [];
+  let paragraph = [];
+  let listItems = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      html.push(`<p>${formatInline(paragraph.join(' '))}</p>`);
+      paragraph = [];
+    }
+  };
+
+  const flushList = () => {
+    if (listItems.length) {
+      html.push(`<ul>${listItems.map((item) => `<li>${formatInline(item)}</li>`).join('')}</ul>`);
+      listItems = [];
+    }
+  };
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      flushParagraph();
+      flushList();
+      return;
+    }
+
+    if (trimmed.startsWith('### ')) {
+      flushParagraph();
+      flushList();
+      html.push(`<h3>${formatInline(trimmed.slice(4))}</h3>`);
+      return;
+    }
+
+    if (trimmed.startsWith('## ')) {
+      flushParagraph();
+      flushList();
+      html.push(`<h2>${formatInline(trimmed.slice(3))}</h2>`);
+      return;
+    }
+
+    if (trimmed.startsWith('# ')) {
+      flushParagraph();
+      flushList();
+      html.push(`<h1>${formatInline(trimmed.slice(2))}</h1>`);
+      return;
+    }
+
+    const listMatch = trimmed.match(/^[-*+]\s+(.*)$/);
+    if (listMatch) {
+      flushParagraph();
+      listItems.push(listMatch[1]);
+      return;
+    }
+
+    paragraph.push(trimmed);
+  });
+
+  flushParagraph();
+  flushList();
+  return html.join('');
+};
+
 const listRenderers = {
   '02_stats_items': (items, el) => {
     el.innerHTML = items
@@ -164,7 +236,7 @@ const listRenderers = {
   '03_cases': (items, el) => {
     el.innerHTML = items
       .map((item) => {
-        const results = (item.results || [])
+        const results = (item.key_results || item.results || [])
           .map(
             (result) => `
             <div class="case-stat">
@@ -175,6 +247,8 @@ const listRenderers = {
           )
           .join('');
         const tags = (item.tags || [])
+          .map((tag) => (typeof tag === 'string' ? tag : tag.tag))
+          .filter(Boolean)
           .map((tag) => `<span class="case-tag">${tag}</span>`)
           .join('');
         return `
@@ -193,7 +267,7 @@ const listRenderers = {
               <p class="case-block__text">${item.solution}</p>
             </div>
             <div class="case-block">
-              <p class="case-block__label">Results</p>
+              <p class="case-block__label">Key Results</p>
               <div class="case-stats">${results}</div>
             </div>
             <div class="case-tags">${tags}</div>
@@ -240,6 +314,12 @@ const applyCmsContent = (data) => {
     setText(el, data[key]);
   });
 
+  document.querySelectorAll('[data-cms-body]').forEach((el) => {
+    const key = el.dataset.cmsBody || 'body';
+    if (!key || !(key in data)) return;
+    el.innerHTML = renderMarkdown(data[key]);
+  });
+
   document.querySelectorAll('[data-cms-list]').forEach((el) => {
     const key = el.dataset.cmsList;
     const items = data[key];
@@ -259,7 +339,8 @@ const loadCmsContent = async () => {
     const response = await fetch(`content/pages/${pageKey}.md`, { cache: 'no-store' });
     if (!response.ok) return;
     const raw = await response.text();
-    const { data } = parseFrontmatter(raw);
+    const { data, body } = parseFrontmatter(raw);
+    if (body && !data.body) data.body = body.trim();
     applyCmsContent(data);
   } catch (error) {
     // Intentionally ignore CMS loader errors in production.

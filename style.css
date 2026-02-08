@@ -281,6 +281,38 @@ header.scrolled .navbar-brand,
   letter-spacing: -0.02em;
 }
 
+.legal-page {
+  color: #0f172a;
+}
+
+.legal-page h2 {
+  margin-top: 2rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.legal-page h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-page p {
+  margin-top: 0.75rem;
+  color: #334155;
+  line-height: 1.75;
+}
+
+.legal-page ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+  color: #334155;
+  list-style: disc;
+}
+
+.legal-page li + li {
+  margin-top: 0.4rem;
+}
+
 .card-glass {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
