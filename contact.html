@@ -24,6 +24,7 @@
               dark: '#170A54',
               brand: '#3A0DBC',
               light: '#F7F7F7',
+              primary: '#3B0DBC',
             },
           },
         },
@@ -32,8 +33,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-light text-dark">
-    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+  <body class="bg-white text-gray-900">
     
     <header class="site-header backdrop-blur fixed top-0 w-full z-40 transition-colors duration-300">
   <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
@@ -58,7 +58,7 @@
       <i data-lucide="menu" class="w-8 h-8"></i>
     </button>
 
-    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-full text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="contact.html">
+    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-lg text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="contact.html">
       Get Started
     </a>
   </nav>
@@ -90,109 +90,138 @@
 </header>
 
     <main>
-      <section class="section-divider on-light bg-white px-6 py-28">
-        <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2">
-          <div>
-            <h1 class="page-title text-4xl font-semibold sm:text-5xl">Let’s Build Something Great.</h1>
-            <iframe
-              src="https://link.seriesmedia.tech/widget/form/Sz2w0u06mISQFh5t6IJr"
-              style="width:100%;height:100%;border:none;border-radius:3px"
-              id="inline-Sz2w0u06mISQFh5t6IJr"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="web form"
-              data-height="769"
-              data-layout-iframe-id="inline-Sz2w0u06mISQFh5t6IJr"
-              data-form-id="Sz2w0u06mISQFh5t6IJr"
-              title="web form"
-            >
-            </iframe>
-            <script src="https://link.seriesmedia.tech/js/form_embed.js"></script>
-          </div>
-          <div class="rounded-3xl border border-black/5 bg-light p-10">
-            <h2 class="text-2xl font-semibold">Contact Info</h2>
-            <ul class="mt-6 space-y-4 text-sm text-black/70">
-              <li>
-                <span class="font-semibold text-black">Email:</span>
-                <a class="hover:text-brand" href="mailto:tania@seriesmedia.net">tania@seriesmedia.net</a>
-              </li>
-              <li>
-                <span class="font-semibold text-black">Phone:</span>
-                <a class="hover:text-brand" href="tel:+393336899634">+39 333 689 9634</a>
-              </li>
-              <li><span class="font-semibold text-black">Location:</span> Swansea, Wales, UK</li>
-              <li><span class="font-semibold text-black">Response Time:</span> Within 24 Hours</li>
-            </ul>
+      <section class="bg-[#2a0986] py-24">
+        <div class="mx-auto w-full max-w-5xl px-6 pt-32 text-center md:pt-40">
+          <h1 class="mb-6 text-5xl font-bold text-white md:text-7xl">Let's bring clarity to your operations.</h1>
+          <p class="mx-auto mb-4 max-w-3xl text-xl text-white/90">Whether you want to automate a few workflows or redesign how your business runs, it starts with a conversation.</p>
+          <p class="mx-auto max-w-2xl text-lg text-white/70">If you're feeling stretched by admin, manual processes, or tools that don't work together, you're in the right place. There's no hard sell here. Just an honest look at what's slowing you down and whether automation can help.</p>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 py-20">
+        <div class="mx-auto w-full max-w-6xl px-6">
+          <h2 class="mb-12 text-center text-4xl font-bold text-gray-900">How would you like to start?</h2>
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div class="rounded-lg border-2 border-primary bg-white p-8 shadow-md">
+              <h3 class="mb-4 text-2xl font-bold text-gray-900">Free AI Efficiency Audit</h3>
+              <p class="mb-6 text-gray-600">A short questionnaire that helps us understand how your business operates today. You'll receive a clear summary of where automation could save you the most time and effort.</p>
+              <div class="mb-3 text-sm font-semibold text-gray-900">What you'll get</div>
+              <ul class="mb-8 flex flex-col gap-3 text-sm text-gray-600">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>2-4 workflows you can automate immediately</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>An estimate of time saved each week</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>Clear next steps, even if we don't work together</span>
+                </li>
+              </ul>
+              <a class="block w-full rounded-lg bg-primary py-3 text-center text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(59,13,188,0.35)]" href="contact.html">Start the Free AI Efficiency Audit</a>
+              <p class="mt-3 text-center text-sm text-gray-400">No commitment. No obligation.</p>
+            </div>
+
+            <div class="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
+              <h3 class="mb-4 text-2xl font-bold text-gray-900">30 Minute Discovery Call</h3>
+              <p class="mb-6 text-gray-600">If you'd rather talk things through, book a short call. We'll discuss how your business runs, where friction shows up, and whether automation makes sense for you right now.</p>
+              <div class="mb-3 text-sm font-semibold text-gray-900">What we'll cover</div>
+              <ul class="mb-8 flex flex-col gap-3 text-sm text-gray-600">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>Your biggest operational bottlenecks</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>What's worth automating and what isn't</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="mt-0.5 h-5 w-5 text-primary" aria-hidden="true"></i>
+                  <span>Whether Series Media is a good fit</span>
+                </li>
+              </ul>
+              <a class="block w-full rounded-lg border-2 border-primary py-3 text-center text-sm font-semibold text-primary transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-primary/5" href="contact.html">Book a 30 Minute Discovery Call</a>
+              <p class="mt-3 text-center text-sm text-gray-400">No sales pressure. Just clarity.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section-divider on-light bg-light px-6 pb-24">
-        <div class="mx-auto w-full max-w-5xl">
-          <div class="section-header">
-            <p class="section-kicker">FAQ</p>
-            <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
+      <section class="bg-white py-20">
+        <div class="mx-auto w-full max-w-6xl px-6 text-center">
+          <h2 class="mb-12 text-4xl font-bold text-gray-900">This is a good fit if you</h2>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="briefcase" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="font-medium text-gray-900">Run a small or growing business</p>
+            </div>
+            <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="weight" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="font-medium text-gray-900">Feel weighed down by admin or manual work</p>
+            </div>
+            <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="unlink" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="font-medium text-gray-900">Use multiple tools that don't connect well</p>
+            </div>
+            <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="trending-up" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="font-medium text-gray-900">Want systems that scale without hiring</p>
+            </div>
           </div>
-          <div class="mt-10 space-y-4" id="faq-list"></div>
+        </div>
+      </section>
+
+      <section class="bg-primary py-20">
+        <div class="mx-auto w-full max-w-4xl px-6 text-center">
+          <h2 class="mb-6 text-4xl font-bold text-white md:text-5xl">If operations feel heavier than they should, let's fix that.</h2>
+          <p class="mb-10 text-xl text-white/80">A short conversation or a simple audit is often all it takes to uncover meaningful improvements.</p>
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Start with the Free AI Efficiency Audit</a>
+            <a class="rounded-lg border-2 border-white px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Or book a 30 minute discovery call</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-dark px-6 py-16 text-white">
-      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer class="bg-gray-900 py-12 text-gray-300">
+      <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-3">
         <div>
-          <h3 class="logo-mark flex items-center gap-2 text-lg font-semibold text-white">
-            <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
-            <span>Series Media</span>
-          </h3>
-          <p class="mt-3 text-sm text-white/70">
-            Transforming businesses through intelligent automation and AI-powered solutions.
-          </p>
+          <p class="text-lg font-semibold text-white">Series Media</p>
+          <p class="mt-3 text-sm text-gray-400">Automation-first systems that help small teams reclaim time and focus.</p>
         </div>
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Quick Links</h4>
-          <ul class="mt-4 space-y-2 text-sm text-white/80">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Quick Links</h3>
+          <ul class="mt-4 space-y-2 text-sm">
             <li><a class="hover:text-white" href="index.html">Home</a></li>
             <li><a class="hover:text-white" href="services.html">Services</a></li>
+            <li><a class="hover:text-white" href="case-studies.html">Case Studies</a></li>
             <li><a class="hover:text-white" href="about.html">About</a></li>
-            <li><a class="hover:text-white" href="privacy.html">Privacy Policy</a></li>
-            <li><a class="hover:text-white" href="terms.html">Terms of Service</a></li>
+            <li><a class="hover:text-white" href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Contact Info</h4>
-          <ul class="mt-4 space-y-2 text-sm text-white/80">
-            <li><a class="hover:text-white" href="mailto:tania@seriesmedia.net">tania@seriesmedia.net</a></li>
-            <li><a class="hover:text-white" href="tel:+393336899634">+39 333 689 9634</a></li>
-            <li>Swansea, Wales, UK</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Social</h4>
-          <div class="mt-4 flex gap-3">
-            <a class="social-link" href="#" aria-label="LinkedIn">
-              <i data-lucide="linkedin" style="stroke-width: 1.5px"></i>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Socials</h3>
+          <div class="mt-4 flex gap-4 text-primary">
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="text-primary" aria-hidden="true"></i>
             </a>
-            <a class="social-link" href="#" aria-label="Twitter">
-              <i data-lucide="twitter" style="stroke-width: 1.5px"></i>
-            </a>
-            <a class="social-link" href="#" aria-label="GitHub">
-              <i data-lucide="github" style="stroke-width: 1.5px"></i>
+            <a href="#" aria-label="Twitter">
+              <i data-lucide="twitter" class="text-primary" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="mt-12 text-center text-xs text-white/60">© 2026 AutomateAI. All rights reserved.</div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script>
-      lucide.createIcons();
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
     </script>
   </body>
 </html>

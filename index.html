@@ -56,33 +56,71 @@
   </head>
   
 <body class="bg-white text-gray-900">
-    <header class="fixed top-0 z-50 w-full bg-white text-gray-900 transition-colors duration-300">
-      <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <a class="text-lg font-semibold text-gray-900" href="index.html">Series Media</a>
-        <nav class="hidden items-center gap-6 text-sm font-medium text-gray-600 md:flex">
-          <a class="hover:text-gray-900" href="index.html">Home</a>
-          <a class="hover:text-gray-900" href="services.html">Services</a>
-          <a class="hover:text-gray-900" href="case-studies.html">Case Studies</a>
-          <a class="hover:text-gray-900" href="about.html">About</a>
-          <a class="hover:text-gray-900" href="contact.html">Contact</a>
-        </nav>
-        <a class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white" href="contact.html">Get Started</a>
-      </div>
-    </header>
-    <section class="relative overflow-hidden bg-gray-900">
-      <div class="absolute inset-0 opacity-40">
-        <div class="h-full w-full bg-gradient-to-br from-primary/40 via-gray-900 to-gray-900"></div>
-      </div>
-      <div class="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-24 text-center">
+    <header class="site-header backdrop-blur fixed top-0 w-full z-40 transition-colors duration-300">
+  <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+    <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-900">
+      <i data-lucide="zap" class="icon-glow h-5 w-5 fill-current" aria-hidden="true"></i>
+      <span>Series Media</span>
+    </div>
+
+    <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+      <a class="text-gray-700 hover:text-blue-600" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-blue-600" href="services.html">Services</a>
+      <a class="text-gray-700 hover:text-blue-600" href="case-studies.html">Case Studies</a>
+      <a class="text-gray-700 hover:text-blue-600" href="about.html">About</a>
+      <a class="text-gray-700 hover:text-blue-600" href="contact.html">Contact</a>
+    </div>
+
+    <button
+      class="nav-toggle p-2 text-black md:hidden hover:bg-gray-100 rounded-md"
+      type="button"
+      aria-label="Open menu"
+    >
+      <i data-lucide="menu" class="w-8 h-8"></i>
+    </button>
+
+    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-lg text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="contact.html">
+      Get Started
+    </a>
+  </nav>
+
+  <div 
+  id="mobile-menu" 
+  class="fixed top-0 right-0 h-full w-64 transform translate-x-full bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col gap-6 p-6 z-[9999]"
+>
+  <button
+    class="mobile-menu-close self-end p-2 text-black hover:bg-gray-100 rounded-full"
+    type="button"
+    aria-label="Close menu"
+  >
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+
+  <nav class="flex flex-col gap-4 text-lg font-medium">
+    <a class="text-black hover:text-purple-600 font-bold" href="index.html">Home</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="services.html">Services</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="case-studies.html">Case Studies</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="about.html">About</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="contact.html">Contact</a>
+  </nav>
+
+  <a class="w-full bg-brand text-white text-center py-3 rounded-lg font-semibold mt-4 hover:brightness-110" href="contact.html">
+    Get Started
+  </a>
+</div>
+</header>
+    <section class="hero-section relative overflow-hidden">
+      <canvas id="bg" aria-hidden="true"></canvas>
+      <div class="hero-content relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-24 text-center">
         <div class="mb-10 h-24 w-24 rounded-full bg-primary/20" aria-hidden="true"></div>
         <h1 class="text-6xl font-bold text-white md:text-7xl">Automate your operations. Get your time back.</h1>
         <p class="mt-6 text-xl text-gray-300">We help startups and small businesses replace manual work with calm, reliable systems using AI-powered automation and clear process design.</p>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
           <div class="flex flex-col items-center">
-            <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white" href="contact.html">Book Your Free AI Efficiency Audit</a>
+            <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(59,13,188,0.35)]" href="contact.html">Book Your Free AI Efficiency Audit</a>
             <span class="mt-2 text-xs text-gray-400">Discover 3 workflows you can automate today</span>
           </div>
-          <a class="rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold text-white" href="contact.html">Book a 30 minute discovery call</a>
+          <a class="rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Book a 30 minute discovery call</a>
         </div>
         <p class="mt-6 text-sm text-gray-400">No pressure. No obligation. Just clarity.</p>
       </div>
@@ -97,19 +135,19 @@
           <p class="mt-6 text-base font-bold text-gray-900">The problem isn’t your team. It’s the lack of structure and automation.</p>
         </div>
         <div class="grid gap-6 sm:grid-cols-2">
-          <div class="rounded-lg bg-gray-50 p-6">
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="clock" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm font-semibold text-gray-900">15+ hours a week lost</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6">
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="unlink" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm font-semibold text-gray-900">Disconnected tools that don’t talk to each other</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6">
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="users" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm font-semibold text-gray-900">Client onboarding that takes days instead of minutes</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6">
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="brain" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm font-semibold text-gray-900">Processes living in people's heads instead of systems</p>
           </div>
@@ -126,15 +164,15 @@
           <p class="mt-6 text-base font-bold text-white">We don’t just install software. We design the operational backbone that lets your business scale without stress or extra headcount.</p>
         </div>
         <div class="mt-12 flex flex-col gap-4 md:mt-24">
-          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg">
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
             <i data-lucide="timer" class="h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="text-sm font-semibold text-gray-900">Reclaim 10–20 hours per week</p>
           </div>
-          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg">
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
             <i data-lucide="repeat" class="h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="text-sm font-semibold text-gray-900">Clear, repeatable workflows for your team</p>
           </div>
-          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg">
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
             <i data-lucide="trending-up" class="h-12 w-12 text-primary" aria-hidden="true"></i>
             <p class="text-sm font-semibold text-gray-900">Operations that scale without hiring</p>
           </div>
@@ -146,19 +184,19 @@
       <div class="mx-auto w-full max-w-6xl px-6">
         <h2 class="text-center text-4xl font-bold text-gray-900 md:text-5xl">Trusted by growing businesses</h2>
         <div class="mt-10 grid gap-6 md:grid-cols-3">
-          <div class="rounded-lg border border-gray-200 bg-white p-6">
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm text-gray-600">Professional, proactive, and always one step ahead — Series Media delivers outstanding work every time.</p>
             <p class="mt-6 text-sm font-semibold text-gray-900">Richard Wilson</p>
             <p class="text-xs text-gray-500">Owner &amp; Director, R2R Tennis</p>
           </div>
-          <div class="rounded-lg border border-gray-200 bg-white p-6">
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm text-gray-600">Series Media brought our ideas to life and continues to support our growth with exceptional quality and reliability.</p>
             <p class="mt-6 text-sm font-semibold text-gray-900">Harry &amp; Dan</p>
             <p class="text-xs text-gray-500">ShoSoccer Coaching</p>
           </div>
-          <div class="rounded-lg border border-gray-200 bg-white p-6">
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
             <p class="mt-4 text-sm text-gray-600">Insightful, strategic, and highly professional — consistently exceptional quality.</p>
             <p class="mt-6 text-sm font-semibold text-gray-900">David Sammel</p>
@@ -173,22 +211,22 @@
         <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">Sustainable growth comes from better systems.</h2>
         <p class="mx-auto mt-4 max-w-3xl text-base text-gray-600">Growth doesn’t come from more tools. It comes from clear structure, smart automation, and systems that create real return.</p>
         <div class="mt-10 grid gap-6 md:grid-cols-4">
-          <div class="rounded-lg bg-white p-6">
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="target" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">ROI First</h3>
             <p class="mt-2 text-sm text-gray-600">Every system we build must save time, reduce errors, or increase capacity.</p>
           </div>
-          <div class="rounded-lg bg-white p-6">
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="layout" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Structure Over Chaos</h3>
             <p class="mt-2 text-sm text-gray-600">Clear workflows replace firefighting and guesswork.</p>
           </div>
-          <div class="rounded-lg bg-white p-6">
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="zap" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Automate the Everyday</h3>
             <p class="mt-2 text-sm text-gray-600">Repetitive admin disappears so your team can focus on higher value work.</p>
           </div>
-          <div class="rounded-lg bg-white p-6">
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <i data-lucide="link" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Connected Tools</h3>
             <p class="mt-2 text-sm text-gray-600">Your systems work together as one, without duplication or friction.</p>
@@ -202,22 +240,22 @@
         <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">How it works</h2>
         <p class="mt-4 text-base text-gray-600">Most clients see results within 2 to 4 weeks.</p>
         <div class="mt-10 grid gap-6 md:grid-cols-4">
-          <div class="rounded-lg bg-gray-50 p-6 text-left">
+          <div class="rounded-lg bg-gray-50 p-6 text-left transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <p class="text-2xl font-bold text-primary">1</p>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Audit</h3>
             <p class="mt-2 text-sm text-gray-600">We review your operations and identify the biggest time drains.</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6 text-left">
+          <div class="rounded-lg bg-gray-50 p-6 text-left transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <p class="text-2xl font-bold text-primary">2</p>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Design</h3>
             <p class="mt-2 text-sm text-gray-600">We map your future workflows so you can see how everything runs.</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6 text-left">
+          <div class="rounded-lg bg-gray-50 p-6 text-left transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <p class="text-2xl font-bold text-primary">3</p>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Automate</h3>
             <p class="mt-2 text-sm text-gray-600">We build, test, and connect your systems, then train your team.</p>
           </div>
-          <div class="rounded-lg bg-gray-50 p-6 text-left">
+          <div class="rounded-lg bg-gray-50 p-6 text-left transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
             <p class="text-2xl font-bold text-primary">4</p>
             <h3 class="mt-4 text-lg font-semibold text-gray-900">Launch</h3>
             <p class="mt-2 text-sm text-gray-600">Your automations go live and you reclaim hours every week.</p>
@@ -231,38 +269,38 @@
       <div class="mx-auto w-full max-w-6xl px-6 text-center">
         <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">Choose your path</h2>
         <div class="mt-10 flex flex-col gap-4">
-          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 md:flex-row md:items-center">
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
             <div>
               <h3 class="text-lg font-semibold text-gray-900">Free AI Efficiency Audit</h3>
               <p class="text-sm text-gray-600">Identify 2–4 workflows you can automate immediately</p>
             </div>
-            <a href="/services" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
           </div>
-          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 md:flex-row md:items-center">
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
             <div>
               <h3 class="text-lg font-semibold text-gray-900">Starter</h3>
               <p class="text-sm text-gray-600">Launch your first automated system</p>
             </div>
-            <a href="/services" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
           </div>
-          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 md:flex-row md:items-center">
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
             <div>
               <h3 class="text-lg font-semibold text-gray-900">Growth</h3>
               <p class="text-sm text-gray-600">Custom workflows, integrations, and SOPs</p>
             </div>
-            <a href="/services" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
           </div>
-          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 md:flex-row md:items-center">
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
             <div>
               <h3 class="text-lg font-semibold text-gray-900">Scale Retainer</h3>
               <p class="text-sm text-gray-600">Ongoing optimisation and support</p>
             </div>
-            <a href="/services" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
           </div>
         </div>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white" href="/services">Find your package</a>
-          <a class="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700" href="contact.html">Book a 30 minute discovery call</a>
+          <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(59,13,188,0.35)]" href="services.html">Find your package</a>
+          <a class="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-[0_12px_24px_rgba(59,13,188,0.2)]" href="contact.html">Book a 30 minute discovery call</a>
         </div>
       </div>
     </section>
@@ -272,8 +310,8 @@
         <h2 class="text-4xl font-bold text-white md:text-5xl">Ready to work smarter?</h2>
         <p class="mt-4 text-base text-white/80">Series Media helps businesses systemise their operations so they run like a system, not a scramble.</p>
         <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary" href="contact.html">Book Your Free AI Efficiency Audit</a>
-          <a class="rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white" href="contact.html">Schedule a 30 minute discovery call</a>
+          <a class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Book Your Free AI Efficiency Audit</a>
+          <a class="rounded-lg border border-white px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Schedule a 30 minute discovery call</a>
         </div>
       </div>
     </section>
@@ -308,24 +346,8 @@
       </div>
     </footer>
 
-    <script>
-      const siteHeader = document.querySelector('header');
-      const updateHeader = () => {
-        if (!siteHeader) return;
-        if (window.scrollY > 50) {
-          siteHeader.classList.remove('bg-white');
-          siteHeader.classList.add('bg-gray-800/50', 'backdrop-blur-md', 'shadow-sm');
-          siteHeader.classList.add('text-white');
-        } else {
-          siteHeader.classList.remove('bg-gray-800/50', 'backdrop-blur-md', 'shadow-sm', 'text-white');
-          siteHeader.classList.add('bg-white');
-        }
-      };
-
-      window.addEventListener('scroll', updateHeader);
-      updateHeader();
-    </script>
-
+    <script type="module" src="/bg-procedural.js"></script>
+    <script src="main.js" defer></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         if (window.lucide) {
@@ -334,5 +356,4 @@
       });
     </script>
   </body>
-</body>
 </html>

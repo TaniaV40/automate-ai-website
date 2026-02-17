@@ -24,6 +24,7 @@
               dark: '#170A54',
               brand: '#3A0DBC',
               light: '#F7F7F7',
+              primary: '#3B0DBC',
             },
           },
         },
@@ -32,8 +33,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  <body class="bg-light text-dark">
-    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+  <body class="bg-white text-gray-900">
     <header class="site-header backdrop-blur fixed top-0 w-full z-40 transition-colors duration-300">
   <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
     <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-900">
@@ -57,7 +57,7 @@
       <i data-lucide="menu" class="w-8 h-8"></i>
     </button>
 
-    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-full text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="contact.html">
+    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-lg text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="contact.html">
       Get Started
     </a>
   </nav>
@@ -89,175 +89,139 @@
 </header>
 
     <main>
-      <section class="section-divider hero-gradient px-6 py-28 text-center text-white">
-        <div class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6">
-          <h1 class="page-title text-white text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl" id="about-hero-title">
-            Building the Future of Work
-          </h1>
-          <p class="max-w-2xl text-base text-white/80 sm:text-lg" id="about-hero-subtext">
-            Founded in 2018, AutomateAI is on a mission to unlock human potential through AI automation.
-          </p>
+      <section class="bg-[#2a0986] py-24">
+        <div class="mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-32 text-center">
+          <h1 class="text-5xl font-bold text-white md:text-7xl">We help businesses work smarter, not harder.</h1>
+          <p class="mt-6 max-w-3xl text-xl text-white/80">Series Media is an operational problem-solving agency for growing businesses.</p>
         </div>
       </section>
 
-      <section class="section-divider on-light bg-light px-6 py-24">
-        <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2 overflow-visible">
+      <section class="bg-white py-20">
+        <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
           <div>
-            <h2 class="text-2xl font-semibold" id="about-mission-title">Mission &amp; Vision</h2>
-            <div>
-              <p class="mt-6 text-sm text-black" id="about-mission-body-1">
-                We design intelligent systems that free teams from repetitive work so they can focus on
-                creativity, strategy, and growth.
-              </p>
-              <p class="mt-4 text-sm text-black" id="about-mission-body-2">
-                Our vision is a world where AI and humans collaborate seamlessly to build resilient,
-                future-ready organizations.
-              </p>
-            </div>
-            <h3 class="mt-10 text-lg font-semibold" id="about-why-title">Why AutomateAI</h3>
-            <ul class="mt-6 space-y-4 text-sm text-black" id="about-why-list">
-              <li>• Custom solutions tailored to your specific needs.</li>
-              <li>• Expert team with 10+ years of AI experience.</li>
-              <li>• 24/7 support and continuous optimization.</li>
-              <li>• Proven track record with Fortune 500 companies.</li>
-            </ul>
+            <h2 class="text-4xl font-bold text-gray-900">Most problems are system problems.</h2>
+            <p class="mt-6 text-lg text-gray-600">When processes rely on memory and manual effort, teams burn out and growth slows. Clear, automated systems change how a business operates.</p>
           </div>
-          <div class="grid grid-cols-2 gap-4" id="about-stats">
-            <div
-              class="rounded-2xl border border-black/10 bg-black/5 p-5 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <p class="text-2xl font-semibold">10+</p>
-              <p class="text-sm text-black">Years Experience</p>
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900">We fix the operational issues behind the scenes.</h2>
+            <p class="mt-6 text-lg text-gray-600">Through automation, AI workflows, and smart system design, we help teams eliminate repetitive work and replace it with systems that run quietly and reliably.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-gray-50 py-20">
+        <div class="mx-auto w-full max-w-6xl px-6 text-center">
+          <h2 class="mb-12 text-4xl font-bold text-gray-900">Clarity before complexity.</h2>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-lg bg-white p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="target" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">ROI before everything</p>
             </div>
-            <div
-              class="rounded-2xl border border-black/10 bg-black/5 p-5 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <p class="text-2xl font-semibold">50+</p>
-              <p class="text-sm text-black">AI Experts</p>
+            <div class="rounded-lg bg-white p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="layout" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Structure over chaos</p>
             </div>
-            <div
-              class="rounded-2xl border border-black/10 bg-black/5 p-5 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <p class="text-2xl font-semibold">15+</p>
-              <p class="text-sm text-black">Industries</p>
+            <div class="rounded-lg bg-white p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="zap" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Automate the everyday</p>
             </div>
-            <div
-              class="rounded-2xl border border-black/10 bg-black/5 p-5 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <p class="text-2xl font-semibold">99%</p>
-              <p class="text-sm text-black">Uptime SLA</p>
+            <div class="rounded-lg bg-white p-6 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="link" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Connected tools</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-divider on-light bg-white px-6 py-24">
-        <div class="mx-auto w-full max-w-6xl">
-          <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
-            <div>
-          <h2 class="text-2xl font-semibold" id="about-story-title">Our Story</h2>
-          <p class="mt-4 text-sm text-black/70" id="about-story-body">
-            AutomateAI started in 2018 with a simple idea: build AI that eliminates busywork and
-            elevates the human impact across every team.
-          </p>
+      <section class="bg-white py-20">
+        <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
+          <div>
+            <h2 class="mb-6 text-4xl font-bold text-gray-900">Why clients choose us</h2>
+            <p class="text-lg text-gray-600">Clients choose Series Media for clarity, practical automation, and systems that deliver real return without overwhelm.</p>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="clipboard-check" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Less admin</p>
             </div>
-            <div>
-          <h3 class="text-lg font-semibold" id="about-timeline-title">Timeline</h3>
-          <ul class="mt-4 space-y-3 text-sm text-black/70" id="about-timeline-list">
-            <li><span class="font-semibold text-black">2018:</span> Founded</li>
-            <li><span class="font-semibold text-black">2019:</span> First Chatbot Launch</li>
-            <li><span class="font-semibold text-black">2021:</span> Expanded to Europe &amp; Asia</li>
-            <li><span class="font-semibold text-black">2023:</span> 500+ Projects Delivered</li>
-          </ul>
+            <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="rocket" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Faster delivery</p>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="shield-check" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Fewer errors</p>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+              <i data-lucide="trending-up" class="mb-4 h-10 w-10 text-primary" aria-hidden="true"></i>
+              <p class="text-sm font-semibold text-gray-900">Immediate ROI</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-divider on-light bg-light px-6 py-24">
-        <div class="mx-auto w-full max-w-6xl">
-        <h2 class="text-2xl font-semibold text-center" id="about-team-title">Leadership Team</h2>
-        <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4" id="about-team-list">
-            <div
-              class="rounded-3xl border border-black/5 bg-white p-8 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <h3 class="text-lg font-semibold">Sarah Chen</h3>
-              <p class="text-sm text-black/60">CEO</p>
-            </div>
-            <div
-              class="rounded-3xl border border-black/5 bg-white p-8 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <h3 class="text-lg font-semibold">Marcus Johnson</h3>
-              <p class="text-sm text-black/60">CTO</p>
-            </div>
-            <div
-              class="rounded-3xl border border-black/5 bg-white p-8 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <h3 class="text-lg font-semibold">Emily Rodriguez</h3>
-              <p class="text-sm text-black/60">Head of AI</p>
-            </div>
-            <div
-              class="rounded-3xl border border-black/5 bg-white p-8 text-center transition duration-300 ease-out hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_0_20px_rgba(58,13,188,0.35)]"
-            >
-              <h3 class="text-lg font-semibold">David Kim</h3>
-              <p class="text-sm text-black/60">Lead Engineer</p>
-            </div>
+      <section class="bg-gray-50 py-20">
+        <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
+          <div class="flex items-center justify-center">
+            <div class="flex aspect-square w-full items-center justify-center rounded-lg bg-gray-200 text-sm font-medium text-gray-500">Tania - Founder Photo</div>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h2 class="mb-6 text-4xl font-bold text-gray-900">Meet the founder</h2>
+            <p class="mb-4 text-lg text-gray-600">Series Media was founded by Tania, an operations-focused strategist with a background in law, business management, and AI-powered automation.</p>
+            <p class="text-xl font-medium text-gray-900 border-l-4 border-primary pl-4">Her philosophy is simple. If a process can be simplified or automated, it should be.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary py-20">
+        <div class="mx-auto w-full max-w-4xl px-6 text-center">
+          <h2 class="mb-6 text-4xl font-bold text-white md:text-5xl">Our promise</h2>
+          <p class="mb-10 text-xl text-white/90">We don’t sell hype or over-engineered tech. We solve operational problems, one system at a time.</p>
+          <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Book your free AI Efficiency Audit</a>
+            <a class="rounded-lg border-2 border-white px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="contact.html">Or schedule a 30 minute discovery call</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-dark px-6 py-16 text-white">
-      <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer class="bg-gray-900 py-12 text-gray-300">
+      <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-3">
         <div>
-          <h3 class="logo-mark flex items-center gap-2 text-lg font-semibold text-white">
-            <i data-lucide="zap" class="icon-glow h-5 w-5" style="stroke-width: 1.5px"></i>
-            <span>Series Media</span>
-          </h3>
-          <p class="mt-3 text-sm text-white/70">
-            Transforming businesses through intelligent automation and AI-powered solutions.
-          </p>
+          <p class="text-lg font-semibold text-white">Series Media</p>
+          <p class="mt-3 text-sm text-gray-400">Automation-first systems that help small teams reclaim time and focus.</p>
         </div>
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Quick Links</h4>
-          <ul class="mt-4 space-y-2 text-sm text-white/80">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Quick Links</h3>
+          <ul class="mt-4 space-y-2 text-sm">
             <li><a class="hover:text-white" href="index.html">Home</a></li>
             <li><a class="hover:text-white" href="services.html">Services</a></li>
             <li><a class="hover:text-white" href="case-studies.html">Case Studies</a></li>
             <li><a class="hover:text-white" href="about.html">About</a></li>
-            <li><a class="hover:text-white" href="privacy.html">Privacy Policy</a></li>
-            <li><a class="hover:text-white" href="terms.html">Terms of Service</a></li>
+            <li><a class="hover:text-white" href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Contact Info</h4>
-          <ul class="mt-4 space-y-2 text-sm text-white/80">
-            <li><a class="hover:text-white" href="mailto:tania@seriesmedia.net">tania@seriesmedia.net</a></li>
-            <li><a class="hover:text-white" href="tel:+393336899634">+39 333 689 9634</a></li>
-            <li>Swansea, Wales, UK</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Social</h4>
-          <div class="mt-4 flex gap-3">
-            <a class="social-link" href="#" aria-label="LinkedIn">
-              <i data-lucide="linkedin" style="stroke-width: 1.5px"></i>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Socials</h3>
+          <div class="mt-4 flex gap-4 text-primary">
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="text-primary" aria-hidden="true"></i>
             </a>
-            <a class="social-link" href="#" aria-label="Twitter">
-              <i data-lucide="twitter" style="stroke-width: 1.5px"></i>
-            </a>
-            <a class="social-link" href="#" aria-label="GitHub">
-              <i data-lucide="github" style="stroke-width: 1.5px"></i>
+            <a href="#" aria-label="Twitter">
+              <i data-lucide="twitter" class="text-primary" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="mt-12 text-center text-xs text-white/60">© 2026 AutomateAI. All rights reserved.</div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script>
-      lucide.createIcons();
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
     </script>
   </body>
 </html>
