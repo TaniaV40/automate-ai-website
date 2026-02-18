@@ -117,7 +117,7 @@
                 <span>Clear next steps, even if we don’t work together</span>
               </li>
             </ul>
-            <a class="block w-full max-w-md mx-auto rounded-sm bg-primary py-4 px-8 text-center text-lg font-bold text-white transition-colors duration-300 hover:bg-primary/90" href="contact.html">Start the Free AI Efficiency Audit</a>
+            <a id="open-audit-modal" class="block w-full max-w-md mx-auto rounded-sm bg-primary py-4 px-8 text-center text-lg font-bold text-white transition-colors duration-300 hover:bg-primary/90">Start the Free AI Efficiency Audit</a>
             <span class="mt-4 block text-center text-sm text-gray-400">No commitment. No obligation.</span>
           </div>
         </div>
@@ -220,6 +220,63 @@
       document.addEventListener('DOMContentLoaded', function() {
         if (window.lucide) {
           window.lucide.createIcons();
+        }
+      });
+    </script>
+    <div id="audit-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+      <div class="bg-white rounded-sm shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative p-6 md:p-8 transform scale-95 transition-transform duration-300" id="audit-modal-content">
+        
+        <button id="close-audit-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <h3 class="text-2xl font-bold mb-4 text-center">AI Efficiency Audit</h3>
+        
+        <iframe src="https://link.seriesmedia.tech/widget/survey/w5eXV7dhutBgE2CFt89T" style="border:none;width:100%;height:600px;" scrolling="yes" id="w5eXV7dhutBgE2CFt89T" title="survey"></iframe>
+        <script src="https://link.seriesmedia.tech/js/form_embed.js"></script>
+
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('audit-modal');
+      const modalContent = document.getElementById('audit-modal-content');
+      const openBtn = document.getElementById('open-audit-modal');
+      const closeBtn = document.getElementById('close-audit-modal');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+        // slight delay to allow display:block to apply before animating opacity
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          modalContent.classList.remove('scale-95');
+          modalContent.classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0');
+        modalContent.classList.remove('scale-100');
+        modalContent.classList.add('scale-95');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 300); // match duration-300
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+
+      // Close when clicking outside the modal content
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
         }
       });
     </script>
