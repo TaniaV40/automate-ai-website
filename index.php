@@ -1,0 +1,346 @@
+<?php require_once( 'couch/cms.php' ); ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <cms:template title='Home Page' />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVGFTL93V5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XVGFTL93V5');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Workflow Automation for Small Businesses | Series Media</title>
+    <link rel="icon" href="img/Series%20Media%20Logo.png">
+    <meta name="description" content="Replace manual work with calm, automated systems. Series Media helps small businesses save time, reduce admin, and scale using AI-powered workflow automation.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.automateai.com/">
+    <meta property="og:title" content="AutomateAI — Intelligent Automation">
+    <meta property="og:description" content="Transform your business with intelligent neural automation.">
+    <meta property="og:image" content="og-image.jpg"> 
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="AutomateAI — Intelligent Automation">
+    <meta property="twitter:description" content="Transform your business with intelligent neural automation.">
+    <meta property="twitter:image" content="og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: '#170A54',
+              brand: '#3A0DBC',
+              light: '#F7F7F7',
+              primary: '#3B0DBC',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          },
+        },
+      };
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  
+<body class="bg-white text-gray-900">
+    <header class="site-header backdrop-blur fixed top-0 w-full z-40 transition-colors duration-300">
+  <nav class="site-nav mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+    <div class="logo-mark flex items-center gap-2 text-xl font-semibold tracking-tight text-gray-900">
+      <img src="img/Series%20Media%20Logo.png" alt="Series Media Logo" class="h-8 w-auto" />
+    </div>
+
+    <div class="hidden items-center gap-6 text-sm font-medium md:flex">
+      <a class="text-gray-700 hover:text-blue-600" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-blue-600" href="services.html">Services</a>
+      <a class="text-gray-700 hover:text-blue-600" href="case-studies.html">Case Studies</a>
+      <a class="text-gray-700 hover:text-blue-600" href="about.html">About</a>
+      <a class="text-gray-700 hover:text-blue-600" href="contact.html">Contact</a>
+    </div>
+
+    <button
+      class="nav-toggle p-2 text-black md:hidden hover:bg-gray-100 rounded-md"
+      type="button"
+      aria-label="Open menu"
+    >
+      <i data-lucide="menu" class="w-8 h-8"></i>
+    </button>
+
+    <a class="btn-cta btn-get-started hidden bg-brand px-5 py-2.5 rounded-lg text-white font-medium transition-all hover:brightness-110 md:inline-flex" href="/contact.html">
+      Get Your Free AI Audit
+    </a>
+  </nav>
+
+  <div 
+  id="mobile-menu" 
+  class="fixed top-0 right-0 h-full w-64 transform translate-x-full bg-white shadow-2xl transition-transform duration-300 ease-in-out md:hidden flex flex-col gap-6 p-6 z-[9999]"
+>
+  <button
+    class="mobile-menu-close self-end p-2 text-black hover:bg-gray-100 rounded-full"
+    type="button"
+    aria-label="Close menu"
+  >
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+
+  <nav class="flex flex-col gap-4 text-lg font-medium">
+    <a class="text-black hover:text-purple-600 font-bold" href="index.html">Home</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="services.html">Services</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="case-studies.html">Case Studies</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="about.html">About</a>
+    <a class="text-black hover:text-purple-600 font-bold" href="contact.html">Contact</a>
+  </nav>
+
+  <a class="w-full bg-brand text-white text-center py-3 rounded-lg font-semibold mt-4 hover:brightness-110" href="/contact.html">
+    Get Your Free AI Audit
+  </a>
+</div>
+</header>
+    <section class="relative overflow-hidden min-h-screen bg-black">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <div class="flex h-full w-full items-center justify-center overflow-hidden">
+          <video class="h-full w-full object-cover scale-110" autoplay muted loop playsinline>
+            <source src="img/hero_animation.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+      <div class="absolute inset-0 z-[1] bg-black/50"></div>
+      <div class="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-24 text-center">
+        <div class="mb-10 h-24 w-24 rounded-full bg-primary/20" aria-hidden="true"></div>
+        <h1 class="text-6xl font-bold text-white md:text-7xl"><cms:editable name='hero_title' type='text'>Automate your operations. Get your time back.</cms:editable></h1>
+        <p class="mt-6 text-xl text-gray-300"><cms:editable name='hero_subtitle' type='text'>We help startups and small businesses replace manual work with calm, reliable systems using AI-powered automation and clear process design.</cms:editable></p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div class="flex flex-col items-center">
+            <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(59,13,188,0.35)]" href="/contact.html">Find Out Your AI Efficiency</a>
+            <span class="mt-2 text-xs text-gray-400">Discover 3 workflows you can automate today</span>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-gray-400">No pressure. No obligation. Just clarity.</p>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">Your business is growing, but your operations can’t keep up.</h2>
+          <p class="mt-4 text-lg text-gray-600">And it’s costing you time, focus, and momentum.</p>
+          <p class="mt-6 text-base text-gray-600">As your business grows, every process starts relying on memory, manual effort, and workarounds. Tasks need chasing. Information lives in inboxes and spreadsheets. Nothing moves unless someone pushes it. Your team becomes the system, and that’s the bottleneck.</p>
+          <p class="mt-6 text-base font-bold text-gray-900">The problem isn’t your team. It’s the lack of structure and automation.</p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="clock" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm font-semibold text-gray-900">15+ hours a week lost</p>
+          </div>
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="unlink" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm font-semibold text-gray-900">Disconnected tools that don’t talk to each other</p>
+          </div>
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="users" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm font-semibold text-gray-900">Client onboarding that takes days instead of minutes</p>
+          </div>
+          <div class="rounded-lg bg-gray-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="brain" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm font-semibold text-gray-900">Processes living in people's heads instead of systems</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#2a0986] py-20 text-white">
+      <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
+        <div>
+          <h2 class="text-4xl font-bold text-white md:text-5xl">We build systems that quietly run in the background.</h2>
+          <p class="mt-6 text-base text-white/80">Series Media designs automated workflows that remove manual work from your day to day operations. Tasks trigger automatically. Information flows where it needs to go. Nothing slips through the cracks.</p>
+          <p class="mt-4 text-base text-white/80">From onboarding and reporting to follow-ups and internal handoffs, we connect your tools into one simple system using platforms like ClickUp, Notion, n8n, and Zapier.</p>
+          <p class="mt-6 text-base font-bold text-white">We don’t just install software. We design the operational backbone that lets your business scale without stress or extra headcount.</p>
+        </div>
+        <div class="mt-12 flex flex-col gap-4 md:mt-24">
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
+            <i data-lucide="timer" class="h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="text-sm font-semibold text-gray-900">Reclaim 10–20 hours per week</p>
+          </div>
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
+            <i data-lucide="repeat" class="h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="text-sm font-semibold text-gray-900">Clear, repeatable workflows for your team</p>
+          </div>
+          <div class="flex items-center gap-4 rounded-lg border border-transparent bg-white p-4 text-gray-900 shadow-lg transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(59,13,188,0.25)]">
+            <i data-lucide="trending-up" class="h-12 w-12 text-primary" aria-hidden="true"></i>
+            <p class="text-sm font-semibold text-gray-900">Operations that scale without hiring</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto w-full max-w-6xl px-6">
+        <h2 class="text-center text-4xl font-bold text-gray-900 md:text-5xl">Trusted by growing businesses</h2>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm text-gray-600">Professional, proactive, and always one step ahead — Series Media delivers outstanding work every time.</p>
+            <p class="mt-6 text-sm font-semibold text-gray-900">Richard Wilson</p>
+            <p class="text-xs text-gray-500">Owner &amp; Director, R2R Tennis</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm text-gray-600">Series Media brought our ideas to life and continues to support our growth with exceptional quality and reliability.</p>
+            <p class="mt-6 text-sm font-semibold text-gray-900">Harry &amp; Dan</p>
+            <p class="text-xs text-gray-500">ShoSoccer Coaching</p>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="quote" class="text-primary" aria-hidden="true"></i>
+            <p class="mt-4 text-sm text-gray-600">Insightful, strategic, and highly professional — consistently exceptional quality.</p>
+            <p class="mt-6 text-sm font-semibold text-gray-900">David Sammel</p>
+            <p class="text-xs text-gray-500">Elite Tennis Coach</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto w-full max-w-6xl px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">Sustainable growth comes from better systems.</h2>
+        <p class="mx-auto mt-4 max-w-3xl text-base text-gray-600">Growth doesn’t come from more tools. It comes from clear structure, smart automation, and systems that create real return.</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-4">
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="target" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">ROI First</h3>
+            <p class="mt-2 text-sm text-gray-600">Every system we build must save time, reduce errors, or increase capacity.</p>
+          </div>
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="layout" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Structure Over Chaos</h3>
+            <p class="mt-2 text-sm text-gray-600">Clear workflows replace firefighting and guesswork.</p>
+          </div>
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="zap" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Automate the Everyday</h3>
+            <p class="mt-2 text-sm text-gray-600">Repetitive admin disappears so your team can focus on higher value work.</p>
+          </div>
+          <div class="rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)]">
+            <i data-lucide="link" class="mb-4 h-12 w-12 text-primary" aria-hidden="true"></i>
+            <h3 class="mt-4 text-lg font-semibold text-gray-900">Connected Tools</h3>
+            <p class="mt-2 text-sm text-gray-600">Your systems work together as one, without duplication or friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20">
+      <div class="mx-auto w-full max-w-6xl px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">How it works</h2>
+        <p class="mt-4 text-base text-gray-600">Most clients see results within 2 to 4 weeks.</p>
+        <div class="mt-10">
+          <img class="w-full rounded-lg border border-gray-200 bg-white" src="img/Home Page process flow.png" alt="Home page process flow" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+      <div class="mx-auto w-full max-w-6xl px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 md:text-5xl">Choose your path</h2>
+        <div class="mt-10 flex flex-col gap-4">
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Free AI Efficiency Audit</h3>
+              <p class="text-sm text-gray-600">Identify 2–4 workflows you can automate immediately</p>
+            </div>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+          </div>
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Starter</h3>
+              <p class="text-sm text-gray-600">Launch your first automated system</p>
+            </div>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+          </div>
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Growth</h3>
+              <p class="text-sm text-gray-600">Custom workflows, integrations, and SOPs</p>
+            </div>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+          </div>
+          <div class="flex flex-col items-start justify-between gap-4 rounded-lg bg-white p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_36px_rgba(59,13,188,0.2)] md:flex-row md:items-center">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Scale Retainer</h3>
+              <p class="text-sm text-gray-600">Ongoing optimisation and support</p>
+            </div>
+            <a href="services.html" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">View Details</a>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(59,13,188,0.35)]" href="services.html">Find your package</a>
+          <a class="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-[0_12px_24px_rgba(59,13,188,0.2)]" href="contact.html">Book a 30 minute discovery call</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary py-20">
+      <div class="mx-auto w-full max-w-4xl px-6 text-center">
+        <h2 class="text-4xl font-bold text-white md:text-5xl">Ready to work smarter?</h2>
+        <p class="mt-4 text-base text-white/80">Series Media helps businesses systemise their operations so they run like a system, not a scramble.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a class="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_12px_24px_rgba(59,13,188,0.25)]" href="/contact.html">Start Your Free AI Efficiency Audit</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 py-12 text-gray-300">
+      <div class="mx-auto grid w-full max-w-6xl gap-10 px-6 md:grid-cols-3">
+        <div>
+          <img src="img/Series%20Media%20Logo.png" alt="Series Media Logo" class="h-8 w-auto" />
+          <p class="mt-3 text-sm text-gray-400">Automation-first systems that help small teams reclaim time and focus.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Quick Links</h3>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li><a class="hover:text-white" href="index.html">Home</a></li>
+            <li><a class="hover:text-white" href="services.html">Services</a></li>
+            <li><a class="hover:text-white" href="case-studies.html">Case Studies</a></li>
+            <li><a class="hover:text-white" href="about.html">About</a></li>
+            <li><a class="hover:text-white" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-gray-400">Socials</h3>
+          <div class="mt-4 flex gap-4 text-primary">
+            <a href="#" aria-label="LinkedIn">
+              <i data-lucide="linkedin" class="text-primary" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i data-lucide="twitter" class="text-primary" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>
+<?php COUCH::invoke(); ?>

@@ -1,6 +1,8 @@
+<?php require_once( 'couch/cms.html' ); ?>
 <!doctype html>
 <html lang="en">
   <head>
+    <cms:template title='About' />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVGFTL93V5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -163,7 +165,7 @@
       <section class="bg-gray-50 py-20">
         <div class="mx-auto grid w-full max-w-6xl gap-12 px-6 lg:grid-cols-2">
           <div class="flex items-center justify-center">
-            <div class="flex aspect-square w-full items-center justify-center rounded-lg bg-gray-200 text-sm font-medium text-gray-500">Tania - Founder Photo</div>
+            <img src="img/Tania Professional.png" alt="Tania, Founder of Series Media" class="aspect-[4/5] w-full rounded object-cover object-top" />
           </div>
           <div class="flex flex-col justify-center">
             <h2 class="mb-6 text-4xl font-bold text-gray-900">Meet the founder</h2>
@@ -224,3 +226,4 @@
     </script>
   </body>
 </html>
+<?php COUCH::invoke(); ?>
